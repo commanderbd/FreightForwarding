@@ -156,7 +156,7 @@ LOGIN_URL = 'login'
 STATIC_URL = '/static/'
 import os
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 # to use gmail smtp, enable less secure app access:
 # https://myaccount.google.com/lesssecureapps?utm_source=google-account&utm_medium=web
