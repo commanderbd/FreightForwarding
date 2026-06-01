@@ -1,2 +1,1 @@
-release: python manage.py migrate --noinput
-web: gunicorn core.wsgi:application --bind 0.0.0.0:$PORT --workers 1
+web: python manage.py collectstatic --noinput --clear 2>/dev/null; gunicorn core.wsgi:application --bind 0.0.0.0:8000 --workers 1
