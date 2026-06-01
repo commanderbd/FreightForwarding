@@ -154,7 +154,8 @@ AUTH_USER_MODEL = 'freightman.SystemUser'
 LOGIN_URL = 'login'
 
 STATIC_URL = '/static/'
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+import os
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # to use gmail smtp, enable less secure app access:
